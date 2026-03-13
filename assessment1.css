@@ -1,0 +1,36 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f9;
+    }
+    h2 {
+      color: #333;
+    }
+    input {
+      margin: 5px;
+      padding: 5px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ccc;
+    }
+    .student {
+      margin-bottom: 10px;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+  
