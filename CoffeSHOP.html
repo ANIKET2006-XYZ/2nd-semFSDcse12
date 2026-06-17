@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven Coffee Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                ☕ Brew Haven
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Fresh Coffee Every Day</h1>
+
+            <p>
+                Crafted with passion, served with love.
+            </p>
+
+            <a href="#menu" class="btn">
+                Explore Menu
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+        <div class="about-container">
+
+            <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200"
+                alt="Coffee Shop"
+            >
+
+            <div class="about-text">
+
+                <h3>Welcome to Brew Haven</h3>
+
+                <p>
+                    We believe every cup tells a story. Our beans are carefully
+                    sourced and roasted to deliver the perfect aroma and flavor.
+                </p>
+
+                <p>
+                    Whether you love espresso, cappuccino, mocha, or latte,
+                    you'll find your favorite coffee experience here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MENU -->
+
+    <section class="menu" id="menu">
+
+        <h2>Our Coffee Menu</h2>
+
+        <div class="menu-container">
+
+            <!-- ITEM 1 -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800"
+                    alt="Espresso"
+                >
+
+                <h3>Espresso</h3>
+
+                <p>Strong and bold coffee shot.</p>
+
+                <span class="price">$3.50</span>
+
+                <button
+                    class="cart-btn"
+                    data-id="1"
+                    data-name="Espresso"
+                    data-price="3.5"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <!-- ITEM 2 -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800"
+                    alt="Cappuccino"
+                >
+
+                <h3>Cappuccino</h3>
+
+                <p>Espresso with steamed milk foam.</p>
+
+                <span class="price">$4.50</span>
+
+                <button
+                    class="cart-btn"
+                    data-id="2"
+                    data-name="Cappuccino"
+                    data-price="4.5"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <!-- ITEM 3 -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800"
+                    alt="Latte"
+                >
+
+                <h3>Latte</h3>
+
+                <p>Smooth creamy milk coffee.</p>
+
+                <span class="price">$5.00</span>
+
+                <button
+                    class="cart-btn"
+                    data-id="3"
+                    data-name="Latte"
+                    data-price="5"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <!-- ITEM 4 -->
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1494314671902-399b18174975?w=800"
+                    alt="Mocha"
+                >
+
+                <h3>Mocha</h3>
+
+                <p>Chocolate flavored coffee delight.</p>
+
+                <span class="price">$5.50</span>
+
+                <button
+                    class="cart-btn"
+                    data-id="4"
+                    data-name="Mocha"
+                    data-price="5.5"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- CART BUTTON -->
+
+    <div class="cart-icon" id="cartIcon">
+
+        <i class="fas fa-shopping-cart"></i>
+
+        <span id="cartCount">0</span>
+
+    </div>
+
+    <!-- CART SIDEBAR -->
+
+    <div class="cart-sidebar" id="cartSidebar">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <span id="closeCart">
+                <i class="fas fa-times"></i>
+            </span>
+
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-footer">
+
+            <h3>
+                Total: $
+                <span id="totalPrice">0.00</span>
+            </h3>
+
+            <button class="checkout-btn">
+                Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Brew Haven Coffee Shop
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
